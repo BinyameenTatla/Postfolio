@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs } from "react-icons/fa"; // Icons for each skill
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs } from "react-icons/fa"; 
+import { SiTailwindcss } from "react-icons/si";// Icons for each skill
 
 const ProgressBar = ({ percentage, color, text }) => {
   return (
@@ -110,7 +111,7 @@ export const MySkills = () => {
           {/* Tailwind CSS Skill */}
           <div className="skill-card bg-gray-800 p-6 rounded-xl text-center transition-all duration-300 ease-in-out hover:scale-105 relative">
             <div className="hexagon bg-gray-800 p-6 flex justify-center items-center mb-4 mx-auto">
-              <div className="text-6xl text-teal-500">🌊</div> {/* Placeholder icon for Tailwind CSS */}
+              <div className="text-6xl text-teal-500"><SiTailwindcss /></div> {/* Placeholder icon for Tailwind CSS */}
             </div><br></br>
             <h3 className="text-2xl font-semibold mb-4 text-teal-500">Tailwind CSS</h3>
             <p className="text-sm text-gray-400 mb-4">

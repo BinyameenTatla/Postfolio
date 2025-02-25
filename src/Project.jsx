@@ -17,7 +17,7 @@ const projects = [
       </div>
     ),
     link: 'https://binyameencoffee.netlify.app',
-    image: '/cof.jpg', // Ensure this path is correct
+    image: '/p.png', // Ensure this path is correct
   },
   {
     title: 'Project 2: Burger Project',
@@ -33,7 +33,7 @@ const projects = [
       </div>
     ),
     link: 'https://binyameenburger.netlify.app',
-    image: '/kk.webp', // Ensure this path is correct
+    image: '/o.png', // Ensure this path is correct
   },
   {
     title: 'Project 3: Gym Project',
@@ -49,7 +49,7 @@ const projects = [
       </div>
     ),
     link: 'https://binyameengym.netlify.app',
-    image: '/eee.jpg', // Ensure this path is correct
+    image: '/image.png', // Ensure this path is correct
   },
 ];
 
