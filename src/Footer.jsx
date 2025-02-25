@@ -20,12 +20,12 @@ export const Footer = () => {
           
           {/* Social Icons */}
           <div className="flex justify-center sm:justify-end space-x-6 text-3xl mt-4 sm:mt-0">
-            <a
-              href="https://twitter.com/yourprofile"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-400 transition duration-300"
-            >
+          <a
+  href="https://twitter.com/BTatla59778"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="hover:text-blue-400 transition duration-300"
+>
               <FaTwitter />
             </a>
             <a

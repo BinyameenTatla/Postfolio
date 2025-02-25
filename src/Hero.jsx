@@ -77,7 +77,7 @@ export const Hero = () => {
 
         {/* Social Media Links (Icons) */}
         <div className="flex lg:justify-start sm:justify-center justify-center space-x-6 mt-6">
-          <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-3xl text-[#fff] hover:text-blue-400">
+          <a href="https://twitter.com/BTatla59778" target="_blank" rel="noopener noreferrer" className="text-3xl text-[#fff] hover:text-blue-400">
             <FaTwitter />
           </a>
           <a
