@@ -13,7 +13,7 @@ export const Hero = () => {
       // Toggle text between "I’m Frontend Dev" and "My name is Binyameen"
       setText(prevText => 
         prevText === "I’m Frontend Dev" 
-          ? "Name is Binyameen" 
+          ? "My name is Binyameen" 
           : "I’m Frontend Dev"
       );
 
