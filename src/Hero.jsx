@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'; // Importing icons
+import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 export const Hero = () => {
   const [text, setText] = useState("I’m Frontend Dev"); // Initial text
   const [bgColor, setBgColor] = useState("bg-gray-800"); // Initial background color
-  const [isDescriptionVisible, setIsDescriptionVisible] = useState(false); // State to toggle description visibility
-  const [isAnimating, setIsAnimating] = useState(false); // To control animation
+  const [isDescriptionVisible, setIsDescriptionVisible] = useState(false); // State to toggle description visibility 
+  const [isAnimating, setIsAnimating] = useState(false); // To control animation 
 
-  // Change text and background color every 3 second
+  // Change text and background color every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       // Toggle text between "I’m Frontend Dev" and "My name is Binyameen"
       setText(prevText => 
         prevText === "I’m Frontend Dev" 
-          ? "My name is Binyameen" 
+          ? "Name is Binyameen" 
           : "I’m Frontend Dev"
       );
 
@@ -25,30 +25,30 @@ export const Hero = () => {
       // Trigger animation for description after text changes
       setIsAnimating(true);
       setTimeout(() => setIsAnimating(false), 3000); // Reset animation after 3 seconds
-    }, 3000); // Change every 3 seconds (you can adjust the interval for longer or shorter)
+    }, 3000); // Change every 3 seconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []); // Empty dependency array to run only once on mount
+  }, []); 
 
   // Show description after 3 seconds of text change
   useEffect(() => {
     setIsDescriptionVisible(true);
-    // Reset description visibility after 6 seconds (to match the text change interval)
+    // Reset description visibility after 6 seconds
     const descriptionTimer = setTimeout(() => {
       setIsDescriptionVisible(false);
-    }, 6000); // Hide description after 6 seconds
+    }, 6000); 
 
-    return () => clearTimeout(descriptionTimer); // Cleanup timeout on component unmount
-  }, [text]); // Reset description visibility when text changes
+    return () => clearTimeout(descriptionTimer);
+  }, [text]); 
 
   return (
-    <div className={`flex flex-col sm:flex-row items-center justify-between px-6 py-12 text-white ${bgColor} transition-all duration-1000`}>
+    <div className={`flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 py-12 text-white ${bgColor} transition-all duration-1000`}>
       {/* Left Section (Text) */}
       <div className="hero-left w-full sm:w-1/2 text-center sm:text-left">
-        <h1 className="text-3xl sm:text-4xl font-bold leading-relaxed mb-6">
+        <h1 className="text-3xl sm:text-4xl text-left text-start  md:text-5xl font-bold leading-relaxed mb-6">
           {text}
         </h1>
-        
+
         {/* Description */}
         <p
           className={`text-lg sm:text-xl font-light opacity-90 mt-4 transition-opacity duration-500 ${isDescriptionVisible ? "opacity-100" : "opacity-0"}`}
@@ -57,7 +57,7 @@ export const Hero = () => {
           Creating intuitive, responsive, and visually appealing web experiences. 
           Let’s collaborate and build something amazing together!
         </p>
-        
+
         <br /><br />
 
         {/* Contact Me Button */}
@@ -86,7 +86,7 @@ export const Hero = () => {
         <img
           src="lk.jfif"
           alt="Your Image"
-          className="w-48 h-48 rounded-full object-cover shadow-xl"
+          className="w-32 h-32 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full object-cover shadow-xl"
         />
       </div>
     </div>
