@@ -45,9 +45,9 @@ export const Hero = () => {
     <div className={`flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 py-12 text-white ${bgColor} transition-all duration-1000`}>
       {/* Left Section (Text) */}
       <div className="hero-left w-full sm:w-1/2 text-center sm:text-left">
-        <h1 className="text-3xl sm:text-4xl text-left justify-items-start md:text-5xl font-bold leading-relaxed mb-6">
-          {text}
-        </h1>
+      <h1 className={`text-3xl sm:text-4xl text-left justify-items-start md:text-5xl font-bold leading-relaxed mb-6 ${text === "My name is Binyameen" ? "bg-gradient-to-r from-pink-500 via-yellow-500 to-purple-500 text-transparent bg-clip-text" : ""}`}>
+  {text}
+</h1>
 
         {/* Description */}
         <p
@@ -60,9 +60,19 @@ export const Hero = () => {
 
         {/* Contact Me Button */}
         <div className="flex lg:justify-start sm:justify-center justify-center mt-6">
-          <a href="#contact" className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-400 focus:ring-4 focus:ring-blue-300 transition duration-300">
-            Contact Me
-          </a>
+         <div className="flex lg:justify-start sm:justify-center justify-center mt-6">
+         <div className="flex lg:justify-start sm:justify-center justify-center mt-6">
+  <a 
+    href="https://wa.me/923187841428?text=Hello,%20I'd%20like%20to%20connect!" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="px-6 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-400 focus:ring-4 focus:ring-green-300 transition duration-300"
+  >
+    Contact Me Now
+  </a>
+</div>
+
+</div>
         </div>
 
         {/* Social Media Links (Icons) */}
@@ -73,9 +83,9 @@ export const Hero = () => {
           <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-3xl text-[#fff] hover:text-blue-600">
             <FaLinkedin />
           </a>
-          <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-3xl text-[#fff] hover:text-blue-600">
-            <FaGithub />
-          </a>
+          <a href="https://github.com/new" target="_blank" rel="noopener noreferrer" className="text-3xl text-[#fff] hover:text-blue-600">
+  <FaGithub />
+</a>
         </div>
       </div>
 

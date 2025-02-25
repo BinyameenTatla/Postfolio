@@ -36,22 +36,17 @@ export const Footer = () => {
             >
               <FaLinkedin />
             </a>
-            <a
-              href="https://github.com/yourprofile"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-600 transition duration-300"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://www.instagram.com/yourprofile"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-pink-500 transition duration-300"
-            >
-              <FaInstagram />
-            </a>
+                    <a href="https://github.com/new" target="_blank" rel="noopener noreferrer" className="text-3xl text-[#fff] hover:text-blue-600">
+             <FaGithub />
+           </a>
+           <a
+  href="https://www.instagram.com/binyameen"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:text-pink-500 transition duration-300"
+>
+  <FaInstagram />
+</a>
           </div>
         </div>
 
