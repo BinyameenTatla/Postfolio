@@ -29,13 +29,13 @@ export const Footer = () => {
               <FaTwitter />
             </a>
             <a
-              href="https://www.linkedin.com/in/yourprofile"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-600 transition duration-300"
-            >
-              <FaLinkedin />
-            </a>
+  href="https://www.linkedin.com/in/BinyameenTatla"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-3xl text-[#fff] hover:text-blue-600"
+>
+  <FaLinkedin />
+</a>
                     <a href="https://github.com/new" target="_blank" rel="noopener noreferrer" className="text-3xl text-[#fff] hover:text-blue-600">
              <FaGithub />
            </a>
