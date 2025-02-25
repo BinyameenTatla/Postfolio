@@ -44,8 +44,8 @@ export const Hero = () => {
   return (
     <div className={`flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 py-12 text-white ${bgColor} transition-all duration-1000`}>
       {/* Left Section (Text) */}
-      <div className="hero-left w-full sm:w-1/2 text-center sm:text-right">
-        <h1 className="text-3xl sm:text-4xl text-left text-start  md:text-5xl font-bold leading-relaxed mb-6">
+      <div className="hero-left w-full sm:w-1/2  text-center sm:text-left">
+        <h1 className="text-3xl sm:text-4xl  text-left text-start  md:text-5xl font-bold leading-relaxed mb-6">
           {text}
         </h1>
 
@@ -53,9 +53,7 @@ export const Hero = () => {
         <p
           className={`text-lg sm:text-xl font-light opacity-90 mt-4 transition-opacity duration-500 ${isDescriptionVisible ? "opacity-100" : "opacity-0"}`}
         >
-          Passionate Frontend Developer specializing in React and Tailwind CSS. 
-          Creating intuitive, responsive, and visually appealing web experiences. 
-          Let’s collaborate and build something amazing together!
+      "I am a passionate Frontend Developer with a deep expertise in React and Tailwind CSS. I craft dynamic, intuitive, and user-friendly web experiences that not only look stunning but also perform flawlessly. With a focus on clean code and responsive design, I create seamless interfaces that adapt beautifully across all devices. Let’s bring your vision to life and create something extraordinary together!"
         </p>
 
         <br /><br />
