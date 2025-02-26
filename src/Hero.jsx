@@ -45,7 +45,7 @@ export const Hero = () => {
     <div className={`flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 py-12 text-white ${bgColor} transition-all duration-1000`}>
       {/* Left Section (Text) */}
       <div className="hero-left w-full sm:w-1/2 text-center sm:text-left">
-      <h1 className={`text-3xl sm:text-4xl text-left justify-items-start md:text-5xl font-bold leading-relaxed mb-6 ${text === "My name is Binyameen" ? "bg-gradient-to-r from-pink-500 via-yellow-500 to-purple-500 text-transparent bg-clip-text" : ""}`}>
+      <h1 className={`text-3xl sm:text-4xl text-left justify-items-start md:text-5xl font-bold leading-relaxed mb-6 ${text === "My name is Binyameen" ? "bg-gradient-to-r from-pink-500 via-yellow-500 to-[#08e41e9a] text-transparent bg-clip-text" : ""}`}>
   {text}
 </h1>
 
@@ -53,7 +53,7 @@ export const Hero = () => {
         <p
           className={`text-lg sm:text-xl font-light opacity-90 mt-4 transition-opacity duration-500 ${isDescriptionVisible ? "opacity-100" : "opacity-0"}`}
         >
-        "I am a passionate Frontend Developer with a deep expertise in React and Tailwind CSS. I craft dynamic, intuitive, and user-friendly web experiences that not only look stunning but also perform flawlessly. With a focus on clean code and responsive design, I create seamless interfaces that adapt beautifully across all devices. Let’s bring your vision to life and create something extraordinary together!"
+       I am a passionate Front-End Developer specializing in creating visually stunning and interactive web experiences. With expertise in HTML, CSS, JavaScript, React, and Node.js, I transform designs into seamless, responsive interfaces that are both beautiful and functional. I focus on delivering clean, efficient code while ensuring a delightful user experience across all devices.
         </p>
 
         <br /><br />
