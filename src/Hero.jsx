@@ -29,8 +29,8 @@ export const Hero = () => {
 
       // Trigger animation for description after text changes
       setIsAnimating(true);
-      setTimeout(() => setIsAnimating(false), 2000); // Reset animation after 3 seconds
-    }, 2000); // Change every 3 seconds
+      setTimeout(() => setIsAnimating(false), 1400); // Reset animation after 3 seconds
+    }, 1400); // Change every 3 seconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
