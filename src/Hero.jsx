@@ -2,20 +2,25 @@ import React, { useState, useEffect } from 'react';
 import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 export const Hero = () => {
-  const [text, setText] = useState("Hello, my name is Binyameen"); // Initial text
+  const [text, setText] = useState([
+    "Hello!", // First line
+    "I am Frontend Dev", // Second line
+    "My name is Binyameen", // Third line
+  ]); // Initial text as an array of strings
   const [bgColor, setBgColor] = useState("bg-gray-800"); // Initial background color
-  const [isDescriptionVisible, setIsDescriptionVisible] = useState(false); // State to toggle description visibility
-  const [isAnimating, setIsAnimating] = useState(false); // To control animation
+  const [isDescriptionVisible, setIsDescriptionVisible] = useState(false); // State to toggle description visibility 
+  const [isAnimating, setIsAnimating] = useState(false); // To control animation 
 
   // Change text and background color every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      // Toggle between "Hello, my name is Binyameen" and "I’m Frontend Dev"
-      setText(prevText =>
-        prevText === "Hello, my name is Binyameen"
-          ? "I’m Frontend Dev"
-          : "Hello, my name is Binyameen"
-      );
+      // Rotate through the text array (Hello, I am Frontend Dev, and Name is Binyameen)
+      setText((prevText) => {
+        const newText = [...prevText];
+        const firstLine = newText.shift(); // Remove the first element
+        newText.push(firstLine); // Push it back at the end
+        return newText;
+      });
 
       // Change background color (you can add more colors to the array)
       const colors = ["bg-gray-800"];
@@ -45,8 +50,19 @@ export const Hero = () => {
     <div className={`flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 py-12 text-white ${bgColor} transition-all duration-1000`}>
       {/* Left Section (Text) */}
       <div className="hero-left w-full sm:w-1/2 text-center sm:text-left">
-        <h1 className={`text-3xl sm:text-4xl text-left justify-items-start md:text-5xl font-bold leading-relaxed mb-6 ${text === "Hello, my name is Binyameen" ? "bg-gradient-to-r from-pink-500 via-yellow-500 to-[#08e41e9a] text-transparent bg-clip-text" : ""}`}>
-          {text}
+        {/* Display text with smooth transitions */}
+        <h1 className={`text-3xl sm:text-4xl text-left justify-items-start md:text-5xl font-bold leading-relaxed mb-6`}>
+          {/* Map through the text array to display each line */}
+          {text.map((line, index) => (
+            <div
+              key={index}
+              className={`transition-opacity duration-1000 ${index === 0 ? 'opacity-100' : 'opacity-0'}`}
+              style={{ transitionDelay: `${index * 1000}ms` }} // Delay each line's appearance
+            >
+              {line}
+              <br />
+            </div>
+          ))}
         </h1>
 
         {/* Description */}
