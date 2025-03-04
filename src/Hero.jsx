@@ -5,7 +5,7 @@ export const Hero = () => {
   const [text, setText] = useState([
     "Hello!", // First line
     "I am Frontend Dev", // Second line
-    "My name is Binyameen", // Third line
+    "Name is Binyameen", // Third line
   ]); // Initial text as an array of strings
   const [bgColor, setBgColor] = useState("bg-gray-800"); // Initial background color
   const [isDescriptionVisible, setIsDescriptionVisible] = useState(false); // State to toggle description visibility 
