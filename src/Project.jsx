@@ -3,7 +3,7 @@ import React from 'react';
 // Sample data for projects
 const projects = [
   {
-    title: 'Project 1: Coffee Project',
+    title: 'Project 1: Agriculture Project',
     description: (
       <div>
         <p>
@@ -16,11 +16,11 @@ const projects = [
         </p>
       </div>
     ),
-    link: 'https://binyameencoffee.netlify.app',
-    image: '/p.png', // Ensure this path is correct
+    link: 'https://binyameenagriculture.netlify.app',
+    image: '/j.png', // Ensure this path is correct
   },
   {
-    title: 'Project 2: Burger Project',
+    title: 'Project 2: Marketing Project',
     description: (
       <div>
         <p>
@@ -32,8 +32,8 @@ const projects = [
         </p>
       </div>
     ),
-    link: 'https://binyameenburger.netlify.app',
-    image: '/o.png', // Ensure this path is correct
+    link: 'https://binyameenmarketing.netlify.app',
+    image: '/kk.png', // Ensure this path is correct
   },
   {
     title: 'Project 3: Gym Project',
