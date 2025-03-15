@@ -8,7 +8,7 @@ const projects = [
       <div>
         <p>
           A full-stack web application built with <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>.
-          This project allows users to order coffee online, view product details, and manage their cart. It integrates a modern design and
+          A sustainable method of farming that avoids synthetic fertilizers and pesticides, focusing on natural processes and soil health.
           smooth user interactions powered by <strong>React Router</strong> and <strong>Context API</strong> for state management.
         </p>
         <p>
@@ -20,16 +20,19 @@ const projects = [
     image: '/j.png', // Ensure this path is correct
   },
   {
-    title: 'Project 2: Marketing Project',
+    title: 'Project 2: Marketing  Agency Project',
     description: (
       <div>
         <p>
           A responsive landing page built with <strong>React</strong>, <strong>Tailwind CSS</strong>, and <strong>JavaScript</strong>.
-          This project showcases a simple, interactive burger menu with smooth animations and a clean design. It utilizes React to manage the user interface dynamically.
+          We design custom marketing solutions to drive traffic and increase sales.Expert strategies to boost your brand’s visibility and revenue. We turn ideas into impactful campaigns that deliver.
+
+
         </p>
-        <p><br></br><br></br>
+        <p>
           <strong>Technologies Used:</strong> React, Tailwind CSS, JavaScript, HTML, CSS.
         </p>
+        <br></br>
       </div>
     ),
     link: 'https://binyameenmarketing.netlify.app',
