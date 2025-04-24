@@ -2,10 +2,10 @@ import React from 'react';
 
 const projects = [
   {
-    title: 'Project 1: Agriculture',
+    title: 'Project 1: E-commerce',
     description: 'A full-stack app for sustainable farming built with React, Node.js, MongoDB, and Tailwind CSS.',
-    link: 'https://binyameenagriculture.netlify.app',
-    image: '/j.png',
+    link: 'https://clientbinyameen.netlify.app',
+    image: '/jj.png',
   },
   {
     title: 'Project 2: Marketing Agency',
