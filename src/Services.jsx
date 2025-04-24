@@ -1,53 +1,72 @@
-import React from 'react';
+import React from "react";
+import { motion } from "framer-motion";
 
 export const Services = () => {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+    }),
+  };
+
+  const services = [
+    {
+      title: "Frontend Development",
+      link: "/frontend",
+      description:
+        "Building responsive, interactive, and modern websites using HTML, CSS, JavaScript, and frameworks like React. I ensure smooth, user-friendly experiences across all devices.",
+    },
+    {
+      title: "Figma React",
+      link: "/figma",
+      description:
+        "Designing clean and effective user interfaces using Figma, then bringing them to life in React. Seamless collaboration and pixel-perfect UI/UX delivery.",
+    },
+    {
+      title: "Landing Page",
+      link: "/linkding",
+      description:
+        "Creating high-converting, visually appealing landing pages with strong calls-to-action, perfect for campaigns, promotions, and product showcases.",
+    },
+  ];
+
   return (
-    <div className="bg-gray-900 text-white py-16 px-6">
-      <h2 className="text-4xl font-bold text-center mb-12">My Services</h2>
+    <div className="bg-gray-900 text-white py-20 px-6 text-center">
+      <motion.h2
+        className="text-5xl font-bold mb-16 text-blue-500"
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+      >
+        My Services
+      </motion.h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Service 1: Frontend Development */}
-        <div className="service-card bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 text-center">
-          <h3 className="text-3xl font-semibold mb-4 text-blue-500">Frontend Development</h3>
-          <p className="text-lg mb-6 text-gray-300">
-          Frontend development is the practice of building the visual and interactive components of a website or web application that users interact with directly. It involves using technologies like HTML, CSS, and JavaScript to create responsive, user-friendly designs and interfaces. Frontend developers work to ensure that a website looks good, is easy to use, and functions smoothly across different devices and browsers. They may also utilize frameworks and libraries like React, Angular, or Vue.js to enhance functionality and efficiency in the development process.
-          </p>
-          <a
-            href="/frontend" // Link to Frontend page (replace with actual link)
-            className="text-blue-500 hover:text-blue-700 font-medium"
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            className="bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-transform transform hover:scale-105 text-left"
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={index}
           >
-            Learn More
-          </a>
-        </div>
-
-        {/* Service 2: Figma Design */}
-        <div className="service-card bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 text-center">
-          <h3 className="text-3xl font-semibold mb-4 text-blue-500">Figma React</h3>
-          <p className="text-lg mb-6 text-gray-300">
-          Figma is a popular cloud-based design tool used for creating user interfaces, wireframes, prototypes, and collaborative design projects. It allows multiple designers to work on the same project in real-time, making it ideal for team-based design work. Figma supports vector graphics, making it versatile for designing both static and interactive elements. It's widely used for UI/UX design, as well as web and mobile app designs, due to its intuitive interface and extensive plugin support.
-          </p>
-          <a
-            href="/figma" // Link to Figma page (replace with actual link)
-            className="text-blue-500 hover:text-blue-700 font-medium"
-          >
-            Learn More
-          </a>
-        </div>
-
-        {/* Service 3: Web Animation */}
-        <div className="service-card bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 text-center">
-  <h3 className="text-3xl font-semibold mb-4 text-blue-500">Linkding Page</h3>
-  <p className="text-lg mb-6 text-gray-300">
-  A landing page is a standalone web page designed with a specific focus, often created for marketing or advertising purposes. It serves as the entry point for visitors, guiding them toward a particular action, such as signing up, making a purchase, or downloading content. Typically, a landing page is optimized for conversions, featuring a clear call-to-action (CTA), compelling visuals, and concise, engaging copy. It’s often linked from ads, emails, or social media posts to drive traffic and achieve a specific goal..
-  </p>
-  <a
-    href="/linkding" // Link to the actual Linkding page (replace with actual link)
-    className="text-blue-500 hover:text-blue-700 font-medium"
-  >
-    Learn More
-  </a>
-</div>
-
+            <h3 className="text-2xl font-semibold mb-4 text-blue-400">
+              {service.title}
+            </h3>
+            <p className="text-gray-300 text-base mb-6">{service.description}</p>
+            <a
+            
+              className="text-blue-400 hover:text-blue-600 font-medium transition duration-200"
+            >
+              Read Now
+            </a>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
